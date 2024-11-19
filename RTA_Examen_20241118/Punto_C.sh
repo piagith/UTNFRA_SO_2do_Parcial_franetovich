@@ -17,14 +17,14 @@ EOF
 
 #Construir + imagen
 echo "construyendo la imagen de docker"
-docker build -t "piafranetovich/web1-franetovich"
-docker push "piafranetovich/web1-franetovich"
+docker build -t "piafranetovich/web1-franetovich".
+docker push "piafranetovich/web1-franetovich".
 
 
-#script run.sh
-echo "script run.sh"
+#script Punto_C.sh
+echo "script Punto_C.sh"
 
-cat <<EOF > run.sh
+cat <<EOF > Punto_C.sh
 
 
 #!/bin/bash
@@ -33,8 +33,7 @@ EOF
 
 
 #permisos de ejecucion
-chmod +x run.sh
-
+chmod +x Punto_C.sh
 
 echo "ejecucion del script"
 
