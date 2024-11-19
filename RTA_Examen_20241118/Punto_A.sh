@@ -37,13 +37,11 @@ mount /dev/vg_datos/lv_docker /var/lib/docker
 mount /dev/vg_datos/lv_workareas /work
 swapon /dev/vg_temp/lv_swap
 
-# Actualizar fstab para montar automáticamente en el arranque
 echo "Actualizando /etc/fstab..."
 echo "/dev/vg_datos/lv_docker /var/lib/docker ext4 defaults 0 0" >> /etc/fstab
 echo "/dev/vg_datos/lv_workareas /work ext4 defaults 0 0" >> /etc/fstab
 echo "/dev/vg_temp/lv_swap swap swap defaults 0 0" >> /etc/fstab
 
-# Agregar disco de 2GB para futuras ampliaciones
 echo "Preparando disco de 2GB para ampliaciones futuras..."
 vgextend vg_datos $DISK_DEFENSE
 
